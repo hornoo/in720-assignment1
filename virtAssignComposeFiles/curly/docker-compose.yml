@@ -13,7 +13,7 @@ consul:
      - 8500:8500
      - 53:53/udp
 flask_app:
-    image: hornoo/virtassignflaskserver
+    image: hornoo/virtassigncurlyflaskserver
     hostname: $PUBLIC_IP
     container_name: curly_flask_app
     ports:
