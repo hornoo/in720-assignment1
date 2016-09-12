@@ -1,5 +1,5 @@
 consul:
-    image: hornoo/virtassignconsulcontainer
+    image: hornoo/virtassignconsulcontainermoe
     hostname: $HOSTNAME
     container_name: moe_agent
     command: -server -advertise $PUBLIC_IP -join $JOIN_IP
@@ -12,3 +12,8 @@ consul:
      - 8400:8400
      - 8500:8500
      - 53:53/udp
+nginxStaticWS:
+    image: hornoo/virtassignmoesws
+    container_name: nginx_static_ws_moe
+    ports:
+    - 80:80
